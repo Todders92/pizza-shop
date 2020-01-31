@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -7,9 +8,12 @@
   <script src="js/scripts.js"></script>
   <title>Pizza Shop</title>
 </head>
+
 <body>
   <div class="container">
-    <h1>Pizza Shop</h1>
+    <div class="jumbotron">
+      <h1>Pizza Pizzaz!</h1>
+    </div>
     <form>
       <label for="size">Select your size</label>
       <select name="" id="size">
@@ -18,17 +22,28 @@
         <option value="Large">Large</option>
       </select>
       <h6>Toppings:</h6>
-
-      <input type="checkbox" name="work-transportation" value="0">Cheese (no charge)<br>
+      <div class="row">
+        <div class="col-sm">
+          <h6>Base(Sauces and Cheeses)</h6>
+          <input type="checkbox" name="toppings" value="0">Mozzarella Cheese(no charge)<br>
+          <input type="checkbox" name="toppings" value="0">No Cheese (no charge)<br>
+          <input type="checkbox" name="toppings" value="1">Feta<br>
+        </div>
+        <div class="col-sm">
+          <h6>Meats</h6>
           <input type="checkbox" name="toppings" value="1">Pepperoni<br>
           <input type="checkbox" name="toppings" value="1">Salami<br>
           <input type="checkbox" name="toppings" value="1">Sausage<br>
           <input type="checkbox" name="toppings" value="1">Chicken<br>
           <input type="checkbox" name="toppings" value="1">Bacon<br>
+        </div>
+        <div class="col-sm">
+          <h6>Veggies and Fruit</h6>
           <input type="checkbox" name="toppings" value="1">Spinach<br>
           <input type="checkbox" name="toppings" value="1">Pineapple<br>
-          <input type="checkbox" name="toppings" value="1">Canadian Bacon
-
+          <input type="checkbox" name="toppings" value="1">Canadian Baconbr<br>
+        </div>
+      </div>
       <button type="submit">Order Pizza</button>
     </form>
     <div id="output">
@@ -37,4 +52,5 @@
     </div>
   </div>
 </body>
+
 </html>
