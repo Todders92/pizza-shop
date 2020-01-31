@@ -25,13 +25,14 @@ Pizza.prototype.addToppings = function() {
 }
 var displaying = function() {
   $("#cost").text(purchase.display());
-  
 };
+var totalToppings = 0
 $(document).ready(function() { 
   $("form").submit(function(event) {
     event.preventDefault();
     var pizzaSize = parseInt($("#size").val());
     var pizzaToppings = [];
+    
     $("input:checkbox[name=toppings]:checked").each(function() {
       var toppings = parseFloat($(this).val());
       pizzaToppings.push(toppings);
@@ -41,7 +42,10 @@ $(document).ready(function() {
     $("#output").show();
     purchase.sizeCheck(pizzaSize);
     displaying();
-    pizzaToppings.reduce((a, b) => a + b, 0);
-    console.log(pizzaToppings);
+    for (var i= 0; i < pizzaToppings.length; i ++) {
+      totalToppings += pizzaToppings[i]
+      console.log(totalToppings);
+    }
+    
   })
 });
