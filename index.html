@@ -17,20 +17,25 @@
     <form>
       <label for="size">Select your size</label>
       <select name="" id="size">
-        <option value="Small">Small</option>
-        <option value="Medium">Medium</option>
-        <option value="Large">Large</option>
+        <option value="Small">Small (11.25)</option>
+        <option value="Medium">Medium (13.25)</option>
+        <option value="Large">Large (15.25)</option>
       </select>
-      <h6>Toppings:</h6>
+      <h6>Toppings: $1 ea for Small, $1.50 for Medium, $2 for Large</h6><br>
       <div class="row">
         <div class="col-sm">
-          <h6>Base(Sauces and Cheeses)</h6>
+          <h6>Sauce:</h6>
+          <input type="checkbox" name="toppings" value="0">Red Sauce (No charge)<br>
+          <input type="checkbox" name="toppings" value="1">Alfredo<br>
+          <input type="checkbox" name="toppings" value="1">Pesto<br>
+          <input type="checkbox" name="toppings" value="0">No Sauce (no charge)<br><br>
+          <h6>Cheese:</h6>
           <input type="checkbox" name="toppings" value="0">Mozzarella Cheese(no charge)<br>
           <input type="checkbox" name="toppings" value="0">No Cheese (no charge)<br>
           <input type="checkbox" name="toppings" value="1">Feta<br>
         </div>
         <div class="col-sm">
-          <h6>Meats</h6>
+          <h6>Meats:</h6>
           <input type="checkbox" name="toppings" value="1">Pepperoni<br>
           <input type="checkbox" name="toppings" value="1">Salami<br>
           <input type="checkbox" name="toppings" value="1">Sausage<br>
@@ -38,14 +43,16 @@
           <input type="checkbox" name="toppings" value="1">Bacon<br>
         </div>
         <div class="col-sm">
-          <h6>Veggies and Fruit</h6>
+          <h6>Veggies and Fruit:</h6>
           <input type="checkbox" name="toppings" value="1">Spinach<br>
           <input type="checkbox" name="toppings" value="1">Pineapple<br>
-          <input type="checkbox" name="toppings" value="1">Canadian Baconbr<br>
+          <input type="checkbox" name="toppings" value="1">Canadian Bacon<br>
+          <input type="checkbox" name="toppings" value="1">Olives<br>
+          <input type="checkbox" name="toppings" value="1">jalapeños<br>
         </div>
       </div>
-      <button type="submit">Order Pizza</button>
-    </form>
+      <br><button type="submit">Order Pizza</button>
+    </form><br>
     <div id="output">
       <h3>Thank you for ordering</h3>
       <p>your total is $<span id="cost"></span></p>
