@@ -5,7 +5,7 @@ function Pizza(size, toppings, price) {
   this.price = price
 }
 
-var purchase = new Pizza (0, 0 ,10)
+var purchase = new Pizza (0, 0, 10)
 
 Pizza.prototype.sizeCheck = function(pizza) {
   this.size = pizza;
@@ -15,14 +15,14 @@ Pizza.prototype.sizeCheck = function(pizza) {
     this.price += 2
   }
 }
-Pizza.prototype.display =function() {
+Pizza.prototype.display = function() {
   return this.price + ".00"
 }
-// Pizza.prototype.toppingCheck = function(pizza) {
-//   this.size = pizza;
-//   if
-// }
-// front end logic
+
+Pizza.prototype.addToppings = function() {
+  pizzaToppings += this.toppings 
+  return this.toppings
+}
 var displaying = function() {
   $("#cost").text(purchase.display());
   
@@ -35,9 +35,13 @@ $(document).ready(function() {
     $("input:checkbox[name=toppings]:checked").each(function() {
       var toppings = parseFloat($(this).val());
       pizzaToppings.push(toppings);
+      
     });
+    pizzaToppings.push(purchase.toppings);
     $("#output").show();
     purchase.sizeCheck(pizzaSize);
     displaying();
+    pizzaToppings.reduce((a, b) => a + b, 0);
+    console.log(pizzaToppings);
   })
 });
