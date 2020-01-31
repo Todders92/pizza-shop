@@ -27,7 +27,13 @@ Pizza.prototype.addToppings = function(pizza) {
   this.topings = totalToppings
 }
 Pizza.prototype.toppingsTotal = function(toppings) {
-  this.toppings = (toppings * 1.5)
+  if (this.size === "Large") {
+  this.toppings = (toppings * 2)
+} else if (this.size === "Medium") {
+  purchase.toppings = (purchase.toppings * 1.5)
+} else if (this.size === "small") {
+  purchase.toppings = (purchase.toppings * 1)
+}
   console.log(this.toppings)
 }
 Pizza.prototype.grandTotal = function(purchase) {
