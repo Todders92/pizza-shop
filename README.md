@@ -12,23 +12,23 @@ _This application has the user order a pizza and the website determines the cost
 
 1. _user submits form gets a baseline price_
     *   _Example Input: Submit order:click_
-    *   _Example Output: your pizza will cost $10_
+    *   _Example Output: your pizza will cost $11.25_
 
 2. _user can select toppings for pizza and submit order and get baseline price_
     *	_Example Input: cheese:checked, roni:checked, salami:checked submit order:click_
-    *   _Example Output: your pizza will cost you $10_ 
+    *   _Example Output: your pizza will cost you $11.25_ 
 
 3. _The user can select a size, toppings and submit the order. page will return baseline price. _
     *	_Example Input: size: large:checked cheese:checked, roni:checked, salami:checked_
-    *   _Example Output: your pizza will cost you 10$_
+    *   _Example Output: your pizza will cost you 11.25$_
 
 4. _the price for the pizza changes based upon what size pizza the user selects upon order submission_
     *	_Example Input: size: medium:checked_
-    *	_Example Output: Your pizza will cost you 12$_
+    *	_Example Output: Your pizza will cost you 12.25$_
 
 5. _The price of the pizza changes based upon what size the pizza the user selects as well as the toppings_
     *	_Example Input: large:checked cheese:checked, roni:checked, salami:checked_
-    *	_Example Output: your pizza will cost you $18_
+    *	_Example Output: your pizza will cost you $19.75_
 
 
 ## Known Bugs

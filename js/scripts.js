@@ -6,7 +6,7 @@ function Pizza(size, toppings, price) {
   this.price = price
 }
 
-var purchase = new Pizza (0, 0, 10)
+var purchase = new Pizza (0, 0, 11.25)
 
 Pizza.prototype.sizeCheck = function(pizza) {
   this.size = pizza;
