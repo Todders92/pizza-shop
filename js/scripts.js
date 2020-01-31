@@ -25,11 +25,17 @@ Pizza.prototype.display =function() {
 // front end logic
 var displaying = function() {
   $("#cost").text(purchase.display());
+  
 };
 $(document).ready(function() { 
   $("form").submit(function(event) {
     event.preventDefault();
     var pizzaSize = parseInt($("#size").val());
+    var pizzaToppings = [];
+    $("input:checkbox[name=toppings]:checked").each(function() {
+      var toppings = parseFloat($(this).val());
+      pizzaToppings.push(toppings);
+    });
     $("#output").show();
     purchase.sizeCheck(pizzaSize);
     displaying();
