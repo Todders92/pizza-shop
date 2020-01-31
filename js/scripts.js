@@ -1,4 +1,5 @@
-// back end logic
+// Back End logic
+
 function Pizza(size, toppings, price) {
   this.size = size,
   this.toppings = toppings,
@@ -18,7 +19,7 @@ Pizza.prototype.sizeCheck = function(pizza) {
   }
 }
 Pizza.prototype.display = function() {
-  return this.price + ".00"
+  return this.price
 }
 
 Pizza.prototype.addToppings = function(pizza) {
@@ -29,6 +30,10 @@ Pizza.prototype.toppingsTotal = function(toppings) {
   this.toppings = (toppings * 1.5)
   console.log(this.toppings)
 }
+Pizza.prototype.grandTotal = function(purchase) {
+  this.price += this.toppings
+}
+// Front End Logic below
 
 var displaying = function() {
   $("#cost").text(purchase.display());
@@ -47,13 +52,15 @@ $(document).ready(function() {
       
     });
     purchase.sizeCheck(pizzaSize);
-    displaying();
+    
     for (var i= 0; i < pizzaToppings.length; i ++) {
       totalToppings += pizzaToppings[i]
       console.log(totalToppings);
     }
     purchase.addToppings(totalToppings);
     purchase.toppingsTotal(totalToppings);
+    purchase.grandTotal();
+    displaying();
     $("#output").show()
   });
 });
