@@ -65,7 +65,7 @@ $(document).ready(function () {
     purchase.toppingsTotal(totalToppings);
     purchase.grandTotal();
     displaying();
-    $("form").hide();
+    $("#form-card").hide();
     $("#output").fadeIn();
   });
 });

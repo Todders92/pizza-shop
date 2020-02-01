@@ -1,11 +1,14 @@
 #output {
   display: none;
 }
-.intro {
+#intro {
   font-family: Tahoma;
   font-style: italic;
 }
 img {
-  height: 30px;
-  width: auto;
+  height: 400px;
+  width: 400px;
+}
+form {
+  margin-bottom: 20px;
 }

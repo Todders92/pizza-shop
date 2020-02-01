@@ -14,56 +14,83 @@
     <div class="jumbotron">
       <h1>Pizza Pizzaz!</h1>
       <h3>Rated Best Pizza In Town By Me, Because I Said So</h3>
-      <img src="img/pizza.jpg" alt="Picture of a pizza">
     </div>
 
-    <h4>A Little Bit About Us:</h4>
-    <p class="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nulla consequuntur dolorum illum, suscipit, consectetur sed dicta eum autem veritatis quod quas quibusdam fuga quisquam.</p>
-    <form>
-      <label for="size">Select your size</label>
-      <select name="" id="size">
-        <option value="Small">Small (11.25)</option>
-        <option value="Medium">Medium (13.25)</option>
-        <option value="Large">Large (15.25)</option>
-      </select>
-      <h6>Toppings: $1 each for Small, $1.50 each for Medium, $2 each for Large</h6><br>
-      <div class="row">
-        <div class="col-sm">
-          <h6>Sauce:</h6>
-          <input type="checkbox" name="toppings" value="0">Red Sauce (No charge)<br>
-          <input type="checkbox" name="toppings" value="1">Alfredo<br>
-          <input type="checkbox" name="toppings" value="1">Pesto<br>
-          <input type="checkbox" name="toppings" value="0">No Sauce (no charge)<br><br>
-          <h6>Cheese:</h6>
-          <input type="checkbox" name="toppings" value="0">Mozzarella Cheese(no charge)<br>
-          <input type="checkbox" name="toppings" value="0">No Cheese (no charge)<br>
-          <input type="checkbox" name="toppings" value="1">Feta<br>
-        </div>
-        <div class="col-sm">
-          <h6>Meats:</h6>
-          <input type="checkbox" name="toppings" value="1">Pepperoni<br>
-          <input type="checkbox" name="toppings" value="1">Salami<br>
-          <input type="checkbox" name="toppings" value="1">Sausage<br>
-          <input type="checkbox" name="toppings" value="1">Chicken<br>
-          <input type="checkbox" name="toppings" value="1">Bacon<br>
-        </div>
-        <div class="col-sm">
-          <h6>Veggies and Fruit:</h6>
-          <input type="checkbox" name="toppings" value="1">Spinach<br>
-          <input type="checkbox" name="toppings" value="1">Pineapple<br>
-          <input type="checkbox" name="toppings" value="1">Canadian Bacon<br>
-          <input type="checkbox" name="toppings" value="1">Olives<br>
-          <input type="checkbox" name="toppings" value="1">jalapeños<br>
+
+
+
+    <div class="card">
+      <h4 class="card-header bg-info text-center">A Little Bit About Us:</h4>
+      <div class="card-body">
+        <p class="card-text" id="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nulla
+          consequuntur dolorum illum, suscipit, consectetur sed dicta eum autem veritatis quod quas quibusdam fuga
+          quisquam.</p>
+      </div>
+    </div><br>
+    <br>
+    <div class="card" id="form-card">
+      <h4 class="card-header bg-info text-center">Order Your Pizza:</h4>
+      <div class="card-body">
+        <p class="card-text" id="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nulla
+          consequuntur dolorum illum, suscipit, consectetur sed dicta eum autem veritatis quod quas quibusdam fuga
+          quisquam.</p>
+
+      </div>
+      <form>
+        <label for="size">Select your size</label>
+        <select name="" id="size">
+          <option value="Small">Small (11.25)</option>
+          <option value="Medium">Medium (13.25)</option>
+          <option value="Large">Large (15.25)</option>
+        </select>
+        <h6>Toppings: $1 each for Small, $1.50 each for Medium, $2 each for Large</h6><br>
+        <div class="row">
+          <div class="col-sm">
+            <h6>Sauce:</h6>
+            <input type="checkbox" name="toppings" value="0">Red Sauce (No charge)<br>
+            <input type="checkbox" name="toppings" value="1">Alfredo<br>
+            <input type="checkbox" name="toppings" value="1">Pesto<br>
+            <input type="checkbox" name="toppings" value="0">No Sauce (no charge)<br><br>
+            <h6>Cheese:</h6>
+            <input type="checkbox" name="toppings" value="0">Mozzarella Cheese(no charge)<br>
+            <input type="checkbox" name="toppings" value="0">No Cheese (no charge)<br>
+            <input type="checkbox" name="toppings" value="1">Feta<br>
+          </div>
+          <div class="col-sm">
+            <h6>Meats:</h6>
+            <input type="checkbox" name="toppings" value="1">Pepperoni<br>
+            <input type="checkbox" name="toppings" value="1">Salami<br>
+            <input type="checkbox" name="toppings" value="1">Sausage<br>
+            <input type="checkbox" name="toppings" value="1">Chicken<br>
+            <input type="checkbox" name="toppings" value="1">Bacon<br>
+          </div>
+          <div class="col-sm">
+            <h6>Veggies and Fruit:</h6>
+            <input type="checkbox" name="toppings" value="1">Spinach<br>
+            <input type="checkbox" name="toppings" value="1">Pineapple<br>
+            <input type="checkbox" name="toppings" value="1">Canadian Bacon<br>
+            <input type="checkbox" name="toppings" value="1">Olives<br>
+            <input type="checkbox" name="toppings" value="1">jalapeños
+          </div>
+        </div><br>
+        <button type="submit" class="btn btn-danger ">Order Pizza</button><br>
+      </form>
+    </div>
+    <div id="output">
+      <div class="card">
+        <img src="img/pizza.jpg" class="card-img-top" alt="picture of a pizza">
+        <div class="card-body">
+          <h5 class="card-title">Thank You For Ordering</h5>
+          <p class="card-text">your total is $<span id="cost"></span></p>
+          <P><a href="index.html">Click Here</a> to order another pizza.</P></p>
         </div>
       </div>
-      <br><button type="submit">Order Pizza</button>
-    </form><br>
-    <div id="output">
-      <h3>Thank You For Ordering</h3>
-      <p>your total is $<span id="cost"></span></p>
-      <P><a href="index.html">Click Here</a> to order another pizza.</P>
     </div>
   </div>
 </body>
 
 </html>
+
+<!-- <h3>Thank You For Ordering</h3>
+      <p>your total is $<span id="cost"></span></p>
+      <P><a href="index.html">Click Here</a> to order another pizza.</P> -->

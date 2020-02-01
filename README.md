@@ -1,12 +1,12 @@
 # _Pizza Shop_
 
-#### _A web application for ordering a pizza_ _24 January 2020_
+#### _A web application for ordering a pizza_ _1/31/2020_
 
 #### By _**Todd Walraven**_
 
 ## Description
 
-_This application has the user order a pizza and the website determines the cost of the pizza based on the size and the toppings selected_
+_This application allows the user order a pizza through filling out a form. The website determines the cost of the pizza based on the size and the toppings selected by the user._
 
 ## Specs
 
@@ -41,14 +41,14 @@ _none yet..._
 
 ## Setup/Installation Requirements
 
-### If Using GitBash or terminal
+### If Using GitBash or Terminal:
 
 * _Clone this repository by entering, in the terminal, the prompt "git clone" followed by the URL to this repository._
 * _Use Terminal to navigate to the correct directory (using the prompt "cd {repository-name}")._
 * _Open in Visual Studio Code using the terminal prompt "code ."_
 * _Open index.html in a browser of your choice._
 
-### If Using Web Browser
+### If Using Web Browser:
 
 * _Download this repository by clicking the green download button_
 * _Navigate to the directory_
@@ -69,4 +69,4 @@ _none yet..._
 
 _This application is licensed under the GPL license_
 
-Copyright (c) 2020 **_Todd Walraven*_**
+Copyright (c) 2020 **_Todd Walraven_**
