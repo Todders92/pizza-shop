@@ -51,8 +51,9 @@ Pizza.prototype.grandTotal = function (purchase) {
   this.price += this.toppings
 }
 // Front End Logic below
-var purchase = new Pizza(0, 0, 0)
+var purchase = new Pizza()
 purchase.startPrice();
+purchase.startToppings();
 var displaying = function () {
   $("#cost").text(purchase.display());
 };
