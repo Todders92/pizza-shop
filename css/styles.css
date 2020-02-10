@@ -7,8 +7,13 @@
 }
 img {
   height: 400px;
-  width: 400px;
 }
 form {
   margin-bottom: 20px;
+}
+body {
+  background: #C5ECD8;
+  background: -webkit-linear-gradient(top, #C5ECD8, #1ECFF3);
+  background: -moz-linear-gradient(top, #C5ECD8, #1ECFF3);
+  background: linear-gradient(to bottom, #C5ECD8, #1ECFF3);
 }

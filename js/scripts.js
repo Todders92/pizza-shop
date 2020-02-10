@@ -2,20 +2,24 @@
 
 function Pizza(size, toppings, price) {
   this.size = size,
-    this.toppings = toppings,
-    this.price = price
+  this.toppings = toppings,
+  this.price = price
 }
 
-var purchase = new Pizza(0, 0, 11.25)
-
+Pizza.prototype.addSize = function (pizzaSize) {
+  this.size = pizzaSize;
+};
+Pizza.prototype.addToppings = function(pizza) {
+  this.toppings.push(pizza);
+};
 Pizza.prototype.sizeCheck = function (pizza) {
   this.size = pizza;
   if (this.size === "Large") {
-    this.price += 4
+    this.price += 15.25
   } else if (this.size === "Medium") {
-    this.price += 2
+    this.price += 13.25
   } else if (this.size === "Small") {
-    this.price += 0
+    this.price += 11.25
   }
 }
 Pizza.prototype.display = function () {
@@ -39,7 +43,7 @@ Pizza.prototype.grandTotal = function (purchase) {
   this.price += this.toppings
 }
 // Front End Logic below
-
+var purchase = new Pizza(0, 0, 0)
 var displaying = function () {
   $("#cost").text(purchase.display());
 };
@@ -56,6 +60,7 @@ $(document).ready(function () {
       pizzaToppings.push(toppings);
 
     });
+    purchase.addSize(pizzaSize);
     purchase.sizeCheck(pizzaSize);
 
     for (var i = 0; i < pizzaToppings.length; i++) {
