@@ -5,7 +5,9 @@ function Pizza(size, toppings, price) {
   this.toppings = toppings,
   this.price = price
 }
-
+Pizza.prototype.pizzaSize = function(pizza) {
+  this.size = pizza;
+}
 Pizza.prototype.addSize = function (pizzaSize) {
   this.size = pizzaSize;
 };
@@ -60,12 +62,12 @@ $(document).ready(function () {
       pizzaToppings.push(toppings);
 
     });
-    purchase.addSize(pizzaSize);
     purchase.sizeCheck(pizzaSize);
 
     for (var i = 0; i < pizzaToppings.length; i++) {
       totalToppings += pizzaToppings[i]
     }
+    purchase.pizzaSize(pizzaSize);
     purchase.addToppings(totalToppings);
     purchase.toppingsTotal(totalToppings);
     purchase.grandTotal();
