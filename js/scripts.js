@@ -47,7 +47,7 @@ Pizza.prototype.toppingsTotal = function (toppings) {
     this.toppings = (purchase.toppings * 1)
   }
 }
-Pizza.prototype.grandTotal = function (purchase) {
+Pizza.prototype.grandTotal = function () {
   this.price += this.toppings
 }
 // Front End Logic below
